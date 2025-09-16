@@ -1,50 +1,84 @@
-/* === Global Styles === */
-:root {
-  --bg: #f9fafb;
-  --text: #1a1a1a;
-  --muted: #666;
-  --accent: #0066cc;
-  --font: "Inter", system-ui, sans-serif;
-}
-
+/* General body styling */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: var(--font);
-  background: var(--bg);
-  color: var(--text);
+  padding: 0;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  flex: 1;
-}
-
-/* === Header === */
-header h1 {
+  background-color: #f9f9f9;
+  color: #333;
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 20px 0;
 }
 
-/* === Sections === */
-main section {
-  margin-bottom: 30px;
+/* Header styling */
+header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+header button {
+  padding: 10px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-/* === Inline Links === */
+header button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Section styling */
+section {
+  display: none; /* hide sections by default */
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+  background-color: #ffffff;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+section.active {
+  display: block;
+}
+
+/* Section headings */
+section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+section h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #007bff;
+}
+
+/* Paragraph styling */
+section p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Inline links container */
 .inline-links {
   display: flex;
   align-items: center;
@@ -53,56 +87,77 @@ h2 {
   margin-top: 10px;
 }
 
+
+/* Paragraph inside inline-links */
 .inline-links p {
-  margin: 0;
+  margin-bottom: 10px;
   font-size: 16px;
-  color: var(--muted);
+  font-weight: 500;
 }
 
-.tag {
-  padding: 6px 12px;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
-}
-
-.tag:hover {
-  background: var(--accent);
+/* Inline button styling */
+.inline-links button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff; /* blue like header hover */
   color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-/* === Footer === */
+.inline-links button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer styling */
 footer {
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: white;
   text-align: center;
-  font-size: 14px;
-  color: var(--muted);
 }
 
-.contact p {
-  margin: 0 0 8px 0;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.contact a {
-  color: var(--text);
+footer a {
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 6px;
-  transition: color 0.2s;
+  margin: 0 5px;
+  transition: color 0.3s ease;
 }
 
-.contact a:hover {
-  color: var(--accent);
+footer a:hover {
+  color: #007bff;
 }
 
-.copyright {
-  margin-top: 10px;
-  font-size: 13px;
-  color: var(--muted);
+footer .contact p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+footer .copyright {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  header button {
+    font-size: 13px;
+    width: 90%;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
 }

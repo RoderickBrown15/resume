@@ -1,66 +1,80 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
-  <title>Roderick Brown — Home</title>
-
-  <!-- Google font (optional) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Link external CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page with 4 Pages</title>
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-  <div class="container" role="main">
-    <header>
-      <div>
-        <h1>Roderick Brown</h1>
-        <!-- <p class="lead">Fourth-year Electrical Engineering major</p> -->
-      </div>
-    </header>
 
-    <main>
-      <section class="card bio" aria-labelledby="bio-heading">
-        <h2 id="bio-heading">About</h2>
-        <p>
-            I am a fourth-year electrical engineering student at UC Davis with a strong interest in analog circuit design and RF systems. My academic background  has given me a solid foundation in circuit theory, electromagnetics, and digital systems, while my hands-on experience has allowed me to design, test, and troubleshoot circuits in project settings. I am eager to learn more and apply my skills to projects with real world applications.
-        </p>
+  <header>
+    <button onclick="showPage(1)">Roderick Brown</button>
+    <button onclick="showPage(2)">Experience</button>
+    <button onclick="showPage(3)">Projects</button>
+    <button onclick="showPage(4)">Resume</button>
+  </header>
 
-      </section>
-
-      <section class="card" aria-labelledby="work-heading">
-        <h2 id="work-heading">Current work</h2>
-        <p style="margin:0 0 12px 0;color:var(--muted);">
-            ECE Systems Electrical Engineering intern at the UC Davis RMI Winery. Maintain and repair electronic units necessary in tracking and controlling the fermentation process of wine lots.
-        </p>
-      </section>
-
-      <div class="inline-links">
+  <!-- Home -->
+  <section id="page1" class="active">
+    <h2>Roderick Brown</h2>
+    <h3>About</h3>
+    <p>I am a fourth-year electrical engineering student at UC Davis with a strong interest in analog circuit design and RF systems. My academic background  has given me a solid foundation in circuit theory, electromagnetics, and digital systems, while my hands-on experience has allowed me to design, test, and troubleshoot circuits in project settings. I am eager to learn more and apply my skills to projects with real world applications.</p>
+    <h3>Current Work</h3>
+    <p>ECE Systems Electrical Engineering intern at the UC Davis RMI Winery. Maintain and repair electronic units necessary in tracking and controlling the fermentation process of wine lots.</p>
+    
+    <div class="inline-links">
         <p>For more information about what I've been working on visit:</p>
-        <a class="tag" href="#" onclick="alert('Replace with contact link')">Projects</a>
-      </div>
+        <button onclick="showPage(3)">Projects</button>
+    </div>
+  </section>
 
-    </main>
+  <!-- Experience -->
+  <section id="page2">
+    <h2>Welcome to Page 2</h2>
+    <p>This is the content of Page 2.</p>
+  </section>
 
-    <footer>
-  <div class="contact">
-    <p>Get in touch:</p>
-    <a href="tel:+8053410741">📞 (805) 341-0741</a> |
-    <a href="mailto:roddyb04@gmail.com">📧 roddyb04@gmail.com</a> |
-    <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-  </div>
-  <div class="copyright">
-    © <span id="year"></span> Roderick Brown
-  </div>
-</footer>
+  <!-- Projects -->
+  <section id="page3">
+    <h2>Welcome to Page 3</h2>
+    <p>This is the content of Page 3.</p>
+  </section>
 
-  </div>
+  <!-- Resume -->
+  <section id="page4">
+    <h2>Welcome to Page 4</h2>
+    <p>This is the content of Page 4.</p>
+  </section>
+
+  <script>
+    function showPage(pageNumber) {
+      // Hide all pages
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById('page' + i).classList.remove('active');
+      }
+
+      // Show selected page
+      document.getElementById('page' + pageNumber).classList.add('active');
+    }
+  </script>
+
+  <footer>
+    <div class="contact">
+      <p>Get in touch:</p>
+      <a href="tel:+8053410741">📞 (805) 341-0741</a> |
+      <a href="mailto:roddyb04@gmail.com">📧 roddyb04@gmail.com</a> |
+      <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Roderick Brown
+    </div>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>

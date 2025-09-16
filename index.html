@@ -1,42 +1,66 @@
-<html>
-	<head>
-		<link href="style.css" rel="stylesheet">
-		<title>Your Name resume</title>
-	</head>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <title>Roderick Brown — Home</title>
 
-	<body>
-		<header id="header">
-			<!-- resume header with your name and title -->
-			<h1>RODERICK NAME</h1>
-			<hr>
-			YOUR TITLE (EX: SOFTWARE ENGINEERING STUDENT)
-			<hr>
-		</header>
-		<main>
-			<article id="mainLeft">
-				<section>
-					<h2>CONTACT</h2>
-					<!-- contact info including social media -->
-				</section>
-				<section>
-					<h2>SKILLS</h2>
-					<!-- your skills -->
-				</section>
-				<section>
-					<h2>EDUCATION</h2>
-					<!-- your education -->
-				</section>            
-			</article>
-			<article id="mainRight">
-				<section>
-					<h2>ABOUT</h2>
-					<!-- about you -->
-				</section>
-				<section>
-					<h2>WORK EXPERIENCE</h2>
-					<!-- your work experience -->
-				</section>
-			</article>
-		</main>
-	</body>
+  <!-- Google font (optional) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div>
+        <h1>Roderick Brown</h1>
+        <!-- <p class="lead">Fourth-year Electrical Engineering major</p> -->
+      </div>
+    </header>
+
+    <main>
+      <section class="card bio" aria-labelledby="bio-heading">
+        <h2 id="bio-heading">About</h2>
+        <p>
+            I am a fourth-year electrical engineering student at UC Davis with a strong interest in analog circuit design and RF systems. My academic background  has given me a solid foundation in circuit theory, electromagnetics, and digital systems, while my hands-on experience has allowed me to design, test, and troubleshoot circuits in project settings. I am eager to learn more and apply my skills to projects with real world applications.
+        </p>
+
+      </section>
+
+      <section class="card" aria-labelledby="work-heading">
+        <h2 id="work-heading">Current work</h2>
+        <p style="margin:0 0 12px 0;color:var(--muted);">
+            ECE Systems Electrical Engineering intern at the UC Davis RMI Winery. Maintain and repair electronic units necessary in tracking and controlling the fermentation process of wine lots.
+        </p>
+      </section>
+
+      <div class="inline-links">
+        <p>For more information about what I've been working on visit:</p>
+        <a class="tag" href="#" onclick="alert('Replace with contact link')">Projects</a>
+      </div>
+
+    </main>
+
+    <footer>
+  <div class="contact">
+    <p>Get in touch:</p>
+    <a href="tel:+8053410741">📞 (805) 341-0741</a> |
+    <a href="mailto:roddyb04@gmail.com">📧 roddyb04@gmail.com</a> |
+    <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+  </div>
+  <div class="copyright">
+    © <span id="year"></span> Roderick Brown
+  </div>
+</footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

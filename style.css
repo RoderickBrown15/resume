@@ -266,8 +266,8 @@ footer .copyright {
 
 /* Headshot styling */
 .home-header-image img {
-  width: 20px;
-  height: 20px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 8px;   /* square with subtle rounded corners */
   border: 2px solid #e5e5e5;

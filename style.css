@@ -247,18 +247,33 @@ footer .copyright {
 .home-header {
   max-width: 900px;
   margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 
-.home-header h1 {
+.home-header-text h1 {
   font-size: 42px;
   margin-bottom: 8px;
 }
 
-.home-header h2 {
+.home-header-text h2 {
   font-size: 18px;
   font-weight: 500;
   color: #555;
 }
+
+/* Headshot styling */
+.home-header-image img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;   /* square with subtle rounded corners */
+  border: 2px solid #e5e5e5;
+}
+
+
 
 .home-content {
   max-width: 900px;

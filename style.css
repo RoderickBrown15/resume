@@ -226,3 +226,16 @@ footer .copyright {
   color: #0056b3;          /* darker on hover */
 }
 
+.project-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-images .project-img {
+  width: 45%;
+  max-width: 350px;
+}
+
+

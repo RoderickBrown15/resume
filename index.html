@@ -52,18 +52,18 @@
   <div class="home-content">
     <h3>About</h3>
     <p>
-      I am a fourth-year electrical engineering student at UC Davis with a strong interest
+      I am a master's electrical engineering student at UC Davis with a strong interest
       in analog circuit design and RF systems. My academic background has given me a solid
-      foundation in circuit theory, electromagnetics, and digital systems, while my hands-on
-      experience has allowed me to design, test, and troubleshoot circuits in project settings.
-      I am eager to apply my skills to real-world applications.
+      foundation in circuit theory, elctromagnetics, and digital systems, while my hands-on
+      experience has allowed me to design, test, and troubleshoot circuits and RF systems in
+      project settings at school, in industry, and at home. I am eager to apply my skills to
+      take on the next challenge and continuing to develop as an engineer.      
     </p>
 
     <h3>Current Work</h3>
     <p>
-      ECE Systems Electrical Engineering Intern at the UC Davis Robert Mondavi Winery,
-      maintaining and repairing electronic systems used to monitor and control the wine
-      fermentation process.
+      New Product Introduction Engineering Intern at Keysight Technologies, supporting the
+      testing and development of Keysights latest RF signal generator.
     </p>
 
     <p class="home-link">
@@ -78,11 +78,38 @@
   <section id="page2">
   <h2>Experience</h2>
 
+  <!-- Keysight -->
+  <div class="experience-block">
+    <div class="block-head">
+      <h3>New Product Introduction Engineering Intern</h3>
+      <h5>Jun 2026 – Sep 2026</h5>
+    </div>
+    <h4>Keysight Technologies — Santa Rosa, CA</h4>
+    <ul>
+      <li>Supported the development and validation of a 26-layer, 20 GHz signal source for Keysight's cutting-edge microwave signal generator.</li>
+      <li>Isolated hardware failures to the component level in RF, analog, and digital domains by analyzing circuit schematics and assembly drawings and utilizing high-frequency test and measurement equipment.</li>
+      <li>Collaborated with R&D engineers to develop solutions for permanent PCA modifications.</li>
+    </ul>
+  </div>
+
+  <!-- Momeni Lab -->
+  <div class="experience-block">
+    <div class="block-head">
+      <h3>Momeni Research Group Member</h3>
+      <h5>Nov 2025 – Present</h5>
+    </div>
+    <ul>
+      <li>Test, troubleshoot, and validate an ultra-sensitive 39 GHz doppler radar system.</li>
+      <li>Characterized radar system performance across multiple applications, including remote heart-rate monitoring, voice detection, and concussion detection.</li>
+      <li>Improved RF system performance by integrating an LNA and experimentally validating component selection.</li>
+    </ul>
+  </div>
+  
   <!-- Winery -->
   <div class="experience-block">
     <div class="block-head">
       <h3>Systems Electrical Engineer Intern</h3>
-      <h5>Jun 2025 – Present</h5>
+      <h5>Jun 2025 – Jan 2026</h5>
     </div>
     <h4>Department of Viticulture &amp; Enology — Davis, CA</h4>
     <ul>
@@ -131,18 +158,6 @@
     </ul>
   </div>
 
-  <!-- Momeni Lab -->
-  <div class="experience-block">
-    <div class="block-head">
-      <h3>Momeni Research Group Member</h3>
-      <h5>Nov 2025 – Present</h5>
-    </div>
-    <ul>
-      <li>Work with a graduate student to develop and test an ultra sensitive radar with the aim of measuring heart movement from a distance.</li>
-      <li>Test effectiveness of radar through different materials.</li>
-    </ul>
-  </div>
-
   <!-- Jeong Lab -->
   <div class="experience-block">
     <div class="block-head">
@@ -187,6 +202,54 @@
 <section id="page3">
   <h2>Projects</h2>
 
+  <!-- Project tapeout -->
+  <div class="experience-block project-block">
+    <div class="block-head">
+      <h3>RF Power Amplifier Design &amp; Tapeout</h3>
+      <h5>Jan 2026 - Dec 2026</h5>
+    </div>
+    <h4>Course Project — Integrated Circuits &amp; Tapeout</h4>
+
+    <ul>
+      <li>Designed a 2.4 GHz class AB RF Power Amplifier with cascode driver stage in 180 nm CMOS.</li>
+      <li>Optimized transistor sizing to maximize output power using load-pull analysis and designed input, interstage, and output matching networks to optimize impedance matching.</li>
+      <li>Designed and assembled an evaluation board to characterize and validate the performance of the taped-out IC.</li>
+      <li class="tools">
+        <span class="tools-label">Tools</span>
+        <span class="tool-tag">Cadence Virtuoso</span>
+        <span class="tool-tag">KiCad</span>
+        <span class="tool-tag">LT Spice</span>
+        <span class="tool-tag">RF Test Equipment</span>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- Project senior design -->
+  <div class="experience-block project-block">
+    <div class="block-head">
+      <h3>FMCW Radar</h3>
+      <h5>Jan 2026 - Jun 2026</h5>
+    </div>
+    <h4>Course Project — RF Systems Design</h4>
+
+    <ul>
+      <li>Designed and characterized a 2.3 - 3.5 GHz FMCW radar as a part of 5 person team.</li>
+      <li>Designed and assembled a baseband and VCO PCB to generate the transmit signal and amplify, filter, and process received and mixed signals.</li>
+      <li>Selected and integrated RF components to meet system-level input power requirements and ensure sufficient transmit power throughout the signal chain.</li>
+      <li class="tools">
+        <span class="tools-label">Tools</span>
+        <span class="tool-tag">Altium</span>
+        <span class="tool-tag">LT Spice</span>
+        <span class="tool-tag">RF Test Equipment</span>
+      </li>
+    </ul>
+
+    <img src="093poster.png"
+         alt="FMCW Senior Design Poster"
+         class="project-img">
+  </div>
+  
   <!-- Project 1 -->
   <div class="experience-block project-block">
     <div class="block-head">
@@ -199,7 +262,7 @@
       <li>Designed and simulated a rectangular microstrip patch antenna in HFSS targeting 2.5 GHz operation with an inset feed for impedance matching.</li>
       <li>Calculated patch dimensions, inset feed length, input impedance, and bandwidth using electromagnetic theory and transmission-line models.</li>
       <li>Fabricated and measured the antenna, achieving resonance within 100 MHz of the target frequency, validating simulation accuracy.</li>
-      <li class="tools"><span class="tools-label">Tools</span><span class="tool-tag">HFSS</span></li>
+      <li class="tools"><span class="tools-label">Tools</span><span class="tool-tag">Cadence Virtuoso</span></li>
     </ul>
 
     <img src="patch-antenna-IMAGE.jpg"
